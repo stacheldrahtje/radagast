@@ -23,7 +23,27 @@
       <height>768</height>
      </rect>
     </property>
-    <widget class="QWidget" name="Intro_page"/>
+    <widget class="QWidget" name="Intro_page">
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>397</x>
+        <y>20</y>
+        <width>231</width>
+        <height>315</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../Downloads/kde-logo-blue-w-slug-2200x3000.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="page_2"/>
    </widget>
   </widget>
