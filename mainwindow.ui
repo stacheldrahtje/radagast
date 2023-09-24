@@ -37,7 +37,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../Downloads/kde-logo-blue-w-slug-2200x3000.png</pixmap>
+       <pixmap>assets/kde-logo-blue-w-slug-2200x3000.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>

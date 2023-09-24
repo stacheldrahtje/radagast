@@ -26,6 +26,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(radagast
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        ../../../Downloads/kde-logo-blue-w-slug-2200x3000.png
+        assets/kde-logo-blue-w-slug-2200x3000.png
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET radagast APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
