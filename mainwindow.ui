@@ -24,7 +24,7 @@
      </rect>
     </property>
     <widget class="QWidget" name="Intro_page">
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="logo_label">
       <property name="geometry">
        <rect>
         <x>397</x>
@@ -43,7 +43,7 @@
        <bool>true</bool>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="txtlabel_1">
       <property name="geometry">
        <rect>
         <x>160</x>
@@ -64,7 +64,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="txtlabel_2">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -85,7 +85,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="nextButton">
       <property name="geometry">
        <rect>
         <x>869</x>
