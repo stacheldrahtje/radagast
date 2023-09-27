@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file>kde-logo-blue-w-slug-2200x3000.png</file>  <!--For now not included-->
+    </qresource>
+</RCC>
