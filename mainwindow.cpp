@@ -21,11 +21,14 @@ void MainWindow::on_nextButton_clicked()
 }
 
 
-void MainWindow::on_passwd_lineEdit_textChanged(const QString &arg1)
+/*void MainWindow::on_passwd_lineEdit_textChanged(const QString &arg1)  // this code needs editing
 {
-    if (ui->passwd_lineEdit != ui->ret_passwd_lineEdit)
+    if ((ui->passwd_lineEdit->text() != ui->ret_passwd_lineEdit->text()) && (ui->ret_passwd_lineEdit->text() != ui->passwd_lineEdit->text()))
     {
-
+        ui->label->setVisible(true);
+    } else
+    {
+        ui->label->setVisible(false);
     }
-}
+}*/
 
