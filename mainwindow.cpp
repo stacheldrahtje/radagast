@@ -8,8 +8,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->label->setVisible(false);
 
-    QObject::connect (ui->nextButton1, &QPushButton::clicked, this, &MainWindow::nextButton1_clicked); // this connect works!
-    QObject::connect (ui->backButton1, &QPushButton::clicked, this, &MainWindow::backButton1_clicked);
+    QObject::connect (ui->nextButton1, &QPushButton::clicked, this, &MainWindow::nextButton1_clicked); // connector nextButton1
+    QObject::connect (ui->backButton1, &QPushButton::clicked, this, &MainWindow::backButton1_clicked); // connector backButton1
+    /* QObject::connect (ui->nextButton2, &QPushButton::clicked, this, &MainWindow::nextButton2_clicked); // connector nextButton2 */
 }
 
 
@@ -22,12 +23,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::nextButton1_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);   // signal next_Button clicked will result to up a page on de stackedWidget
+    ui->stackedWidget->setCurrentIndex(1);   // signal next_Button1 points to Enter_page of stackedWidget
 }
 
 void MainWindow::backButton1_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->setCurrentIndex(0);   // signal back_Button1 points to Intro_page of stackedWidget
 }
 
 
