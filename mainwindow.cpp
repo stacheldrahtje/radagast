@@ -8,8 +8,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->label->setVisible(false);
 
-    QObject::connect (ui->nextButton1, &QPushButton::clicked, this, &MainWindow::nextButton1_clicked); // this connect works!
+    QObject::connect (ui->nextButton1, &QPushButton::clicked, this, &MainWindow::nextButton1_clicked); // connector nextButton1
+    QObject::connect (ui->backButton1, &QPushButton::clicked, this, &MainWindow::backButton1_clicked); // connector backButton1
+    QObject::connect (ui->nextButton2, &QPushButton::clicked, this, &MainWindow::nextButton2_clicked); // connector nextButton2
+    QObject::connect (ui->uname_lineEdit, &QLineEdit::textChanged, this, &MainWindow::uname_lineEdit_textChanged);
 }
+
 
 
 MainWindow::~MainWindow()
@@ -17,12 +21,28 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::uname_lineEdit_textChanged()
+{
+
+}
+
+
+void MainWindow::nextButton2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);   // signal next_Button1 points to Enter_page of stackedWidget
+}
 
 
 void MainWindow::nextButton1_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(1);   // signal next_Button clicked will result to up a page on de stackedWidget
+    ui->stackedWidget->setCurrentIndex(1);   // signal next_Button1 points to Enter_page of stackedWidget
 }
+
+void MainWindow::backButton1_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);   // signal back_Button1 points to Intro_page of stackedWidget
+}
+
 
 // if 1st password line != 2nd passwd line show red message passwords don't match
 // and remove the red message when they are the same
@@ -49,3 +69,6 @@ void MainWindow::on_ret_passwd_lineEdit_textChanged(const QString &arg1)  // thi
         ui->label->setVisible(false);
     }
 }
+
+
+
