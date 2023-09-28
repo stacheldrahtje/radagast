@@ -20,6 +20,8 @@ private slots:
 
     void nextButton1_clicked();
 
+    void backButton1_clicked();
+
     void on_passwd_lineEdit_textChanged(const QString &arg1);
 
     void on_ret_passwd_lineEdit_textChanged(const QString &arg1);
