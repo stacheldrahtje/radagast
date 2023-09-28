@@ -28,6 +28,8 @@ private slots:
 
     void on_ret_passwd_lineEdit_textChanged(const QString &arg1); // 2nd passwd line check wrt 1st passwd line
 
+    void uname_lineEdit_textChanged();
+
 private:
     Ui::MainWindow *ui;
 };
