@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Intro_page">
      <widget class="QLabel" name="logo_label">
@@ -91,7 +91,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="nextButton">
+     <widget class="QPushButton" name="nextButton1">
       <property name="geometry">
        <rect>
         <x>869</x>

@@ -16,9 +16,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_nextButton_clicked();
+    //void on_nextButton1_clicked();
+
+    void nextButton1_clicked();
 
     void on_passwd_lineEdit_textChanged(const QString &arg1);
+
+    void on_ret_passwd_lineEdit_textChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;
