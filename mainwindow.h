@@ -16,7 +16,7 @@ public:
     ~MainWindow();
 
 private slots:
-    //void on_nextButton1_clicked();
+    //void on_nextButton1_clicked(); // deprecated in line for removal
 
     void nextButton1_clicked();
 
