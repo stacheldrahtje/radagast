@@ -82,11 +82,11 @@ void MainWindow::on_passwd_lineEdit_textChanged(const QString &arg1)
     {
         ui->label->setVisible(true);
         ui->nextButton2->setEnabled(false);
-        return;
+        //return;
     } else
     {
         ui->label->setVisible(false);
-        if (ui->uname_lineEdit->text().length() <= 1)
+        if ( ui->uname_lineEdit->text().length() >= 1)
         {
             ui->nextButton2->setEnabled(true);
             return;
@@ -102,11 +102,11 @@ void MainWindow::on_ret_passwd_lineEdit_textChanged(const QString &arg1)  // thi
     {
         ui->label->setVisible(true);
         ui->nextButton2->setEnabled(false);
-        return;
+        //return;
     } else
     {
         ui->label->setVisible(false);
-        if (ui->uname_lineEdit->text().length() <= 1)
+        if ( ui->uname_lineEdit->text().length() >= 1)
         {
             ui->nextButton2->setEnabled(true);
             return;
