@@ -82,15 +82,15 @@ void MainWindow::on_passwd_lineEdit_textChanged(const QString &arg1)
     {
         ui->label->setVisible(true);
         ui->nextButton2->setEnabled(false);
+        return;
     } else
     {
         ui->label->setVisible(false);
-        /*if (ui->passwd_lineEdit->text().length() > 1);
+        if (ui->uname_lineEdit->text().length() <= 1)
         {
-            qDebug() << ui->passwd_lineEdit->text().length();
             ui->nextButton2->setEnabled(true);
             return;
-        }*/
+        }
     }
 }
 
@@ -102,15 +102,16 @@ void MainWindow::on_ret_passwd_lineEdit_textChanged(const QString &arg1)  // thi
     {
         ui->label->setVisible(true);
         ui->nextButton2->setEnabled(false);
+        return;
     } else
     {
         ui->label->setVisible(false);
-        /*if (ui->passwd_lineEdit->text().length() > 1);
+        if (ui->uname_lineEdit->text().length() <= 1)
         {
-            qDebug() << ui->passwd_lineEdit->text().length();
             ui->nextButton2->setEnabled(true);
             return;
-        }*/
+        }
+
     }
 }
 
