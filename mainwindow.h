@@ -24,11 +24,13 @@ private slots:
 
     void backButton1_clicked(); // Enter_page -> Intro_page && Summary_page -> Enter_page
 
+    void backButton2_clicked(); // Summary_page -> Enter_page
+
     void on_passwd_lineEdit_textChanged(const QString &arg1); // 1st passwd line check wrt 2nd passwd line
 
     void on_ret_passwd_lineEdit_textChanged(const QString &arg1); // 2nd passwd line check wrt 1st passwd line
 
-    void uname_lineEdit_textChanged();
+    void uname_lineEdit_textChanged(); // check wether uname and passwd entries are filled
 
 private:
     Ui::MainWindow *ui;

@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Intro_page">
      <widget class="QLabel" name="logo_label">
@@ -281,7 +281,7 @@
      </widget>
      <widget class="QPushButton" name="nextButton2">
       <property name="enabled">
-       <bool>true</bool>
+       <bool>false</bool>
       </property>
       <property name="geometry">
        <rect>
@@ -381,6 +381,35 @@
       </property>
       <property name="text">
        <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="backButton2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>685</y>
+        <width>111</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="commitButton">
+      <property name="geometry">
+       <rect>
+        <x>869</x>
+        <y>685</y>
+        <width>111</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Commit</string>
       </property>
      </widget>
     </widget>
