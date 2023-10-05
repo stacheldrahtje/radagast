@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Intro_page">
      <widget class="QLabel" name="logo_label">
@@ -43,7 +43,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/assets/kde-logo-blue-w-slug-2200x3000.png</pixmap>
+       <pixmap>:/assets/kde-logo-blue-w-slug-2200x3000.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -196,7 +196,7 @@
       <property name="geometry">
        <rect>
         <x>460</x>
-        <y>410</y>
+        <y>420</y>
         <width>150</width>
         <height>26</height>
        </rect>
@@ -311,6 +311,32 @@
        <string>Back</string>
       </property>
      </widget>
+     <widget class="QLabel" name="fname_label">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>240</y>
+        <width>150</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Full name:</string>
+      </property>
+      <property name="buddy">
+       <cstring>uname_lineEdit</cstring>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="fname_lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>240</y>
+        <width>150</width>
+        <height>26</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="Summary_page">
      <widget class="QLabel" name="label_2">
@@ -416,8 +442,6 @@
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
