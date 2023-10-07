@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect (ui->backButton1, &QPushButton::clicked, this, &MainWindow::backButton1_clicked); // connector backButton1
     QObject::connect (ui->nextButton2, &QPushButton::clicked, this, &MainWindow::nextButton2_clicked); // connector nextButton2
     QObject::connect (ui->uname_lineEdit, &QLineEdit::textChanged, this, &MainWindow::uname_lineEdit_textChanged); // connector check uname_LineEdit has changed
+    QObject::connect (ui->fname_lineEdit, &QLineEdit::textChanged, this, &MainWindow::fname_lineEdit_textChanged); // connector check fname_LineEdit has changed
     QObject::connect (ui->backButton2, &QPushButton::clicked, this, &MainWindow::backButton2_clicked); // connector backButton1
 }
 
@@ -40,9 +41,7 @@ void MainWindow::uname_lineEdit_textChanged()
     }
     if (ui->passwd_lineEdit->text().length() > 1 && ui->fname_lineEdit->text().length() > 1)
     {
-           //qDebug() << ui->passwd_lineEdit->text().length();
            ui->nextButton2->setEnabled(true);
-           qDebug() << "True";
            return;
     }
 };
@@ -60,11 +59,9 @@ void MainWindow::fname_lineEdit_textChanged()
            ui->nextButton2->setEnabled(false);
            return;
     }
-    if (ui->passwd_lineEdit->text().length() > 1 && ui->fname_lineEdit->text().length() > 1)
+    if (ui->passwd_lineEdit->text().length() > 1 && ui->uname_lineEdit->text().length() > 1)
     {
-           //qDebug() << ui->passwd_lineEdit->text().length();
            ui->nextButton2->setEnabled(true);
-           qDebug() << "True";
            return;
     }
 };
