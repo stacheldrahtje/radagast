@@ -70,6 +70,8 @@ void MainWindow::fname_lineEdit_textChanged()
 void MainWindow::nextButton2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);   // signal next_Button2 points to Summary_page of stackedWidget
+    ui->uname_l->setText(ui->uname_lineEdit->text()); // set label with uname_lineEdit
+    ui->passwd_l->setText(ui->passwd_lineEdit->text()); // set label with passwd_lineEdit
 };
 
 
