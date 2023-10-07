@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->label->setVisible(false);
     ui->nextButton2->setEnabled(false);
+    ui->fname_lineEdit->setFocus();
 
     // connectors
     QObject::connect (ui->nextButton1, &QPushButton::clicked, this, &MainWindow::nextButton1_clicked); // connector nextButton1
@@ -37,7 +38,7 @@ void MainWindow::uname_lineEdit_textChanged()
            ui->nextButton2->setEnabled(false);
            return;
     }
-    if (ui->passwd_lineEdit->text().length() > 1)
+    if (ui->passwd_lineEdit->text().length() > 1 && ui->fname_lineEdit->text().length() > 1)
     {
            //qDebug() << ui->passwd_lineEdit->text().length();
            ui->nextButton2->setEnabled(true);
@@ -59,7 +60,7 @@ void MainWindow::fname_lineEdit_textChanged()
            ui->nextButton2->setEnabled(false);
            return;
     }
-    if (ui->passwd_lineEdit->text().length() > 1)
+    if (ui->passwd_lineEdit->text().length() > 1 && ui->fname_lineEdit->text().length() > 1)
     {
            //qDebug() << ui->passwd_lineEdit->text().length();
            ui->nextButton2->setEnabled(true);

@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Intro_page">
      <widget class="QLabel" name="logo_label">
@@ -324,7 +324,7 @@
        <string>Full name:</string>
       </property>
       <property name="buddy">
-       <cstring>uname_lineEdit</cstring>
+       <cstring>fname_lineEdit</cstring>
       </property>
      </widget>
      <widget class="QLineEdit" name="fname_lineEdit">
