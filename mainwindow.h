@@ -16,8 +16,6 @@ public:
     ~MainWindow();
 
 private slots:
-    //void on_nextButton1_clicked(); // deprecated in line for removal
-
     void nextButton1_clicked(); // Intro_page -> Enter_page
 
     void nextButton2_clicked(); // Enter_page -> Summary_page
@@ -31,6 +29,8 @@ private slots:
     void on_ret_passwd_lineEdit_textChanged(const QString &arg1); // 2nd passwd line check wrt 1st passwd line
 
     void uname_lineEdit_textChanged(); // check wether uname and passwd entries are filled
+
+    void fname_lineEdit_textChanged(); // check wether uname and passwd entries are filled
 
 private:
     Ui::MainWindow *ui;

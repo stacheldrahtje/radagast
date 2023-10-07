@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label->setVisible(false);
     ui->nextButton2->setEnabled(false);
 
+    // connectors
     QObject::connect (ui->nextButton1, &QPushButton::clicked, this, &MainWindow::nextButton1_clicked); // connector nextButton1
     QObject::connect (ui->backButton1, &QPushButton::clicked, this, &MainWindow::backButton1_clicked); // connector backButton1
     QObject::connect (ui->nextButton2, &QPushButton::clicked, this, &MainWindow::nextButton2_clicked); // connector nextButton2
@@ -36,10 +37,29 @@ void MainWindow::uname_lineEdit_textChanged()
            ui->nextButton2->setEnabled(false);
            return;
     }
+    if (ui->passwd_lineEdit->text().length() > 1)
+    {
+           //qDebug() << ui->passwd_lineEdit->text().length();
+           ui->nextButton2->setEnabled(true);
+           qDebug() << "True";
+           return;
+    }
+};
 
-    int count = ui->passwd_lineEdit->text().length();
-    qDebug() << count;
-    if (count > 1)
+void MainWindow::fname_lineEdit_textChanged()
+{
+
+    if (ui->passwd_lineEdit->text() != ui->ret_passwd_lineEdit->text())
+    {
+           ui->nextButton2->setEnabled(false);
+           return;
+    }
+    if (ui->ret_passwd_lineEdit->text() != ui->passwd_lineEdit->text())
+    {
+           ui->nextButton2->setEnabled(false);
+           return;
+    }
+    if (ui->passwd_lineEdit->text().length() > 1)
     {
            //qDebug() << ui->passwd_lineEdit->text().length();
            ui->nextButton2->setEnabled(true);
@@ -67,10 +87,11 @@ void MainWindow::backButton1_clicked()
 
 void MainWindow::backButton2_clicked()
 {
-    ui->uname_lineEdit->setText(nullptr);
-    ui->passwd_lineEdit->setText(nullptr);
-    ui->ret_passwd_lineEdit->setText(nullptr);
-    ui->keyb_layout_lineEdit->setText(nullptr);
+    ui->fname_lineEdit->clear();
+    ui->uname_lineEdit->clear();
+    ui->passwd_lineEdit->clear();
+    ui->ret_passwd_lineEdit->clear();
+    ui->keyb_layout_lineEdit->clear();
     ui->stackedWidget->setCurrentIndex(1);
 };
 
@@ -86,7 +107,7 @@ void MainWindow::on_passwd_lineEdit_textChanged(const QString &arg1)
     } else
     {
         ui->label->setVisible(false);
-        if ( ui->uname_lineEdit->text().length() >= 1)
+        if ( ui->uname_lineEdit->text().length() >= 1 && ui->fname_lineEdit->text().length() >= 1)
         {
             ui->nextButton2->setEnabled(true);
             return;
@@ -106,7 +127,7 @@ void MainWindow::on_ret_passwd_lineEdit_textChanged(const QString &arg1)  // thi
     } else
     {
         ui->label->setVisible(false);
-        if ( ui->uname_lineEdit->text().length() >= 1)
+        if ( ui->uname_lineEdit->text().length() >= 1 && ui->fname_lineEdit->text().length() >= 1)
         {
             ui->nextButton2->setEnabled(true);
             return;
