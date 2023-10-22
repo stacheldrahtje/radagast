@@ -26,6 +26,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(radagast
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        checkstring.h checkstring.cpp
         #resources.qrc // disabled ivm copyright logo
 
     )
