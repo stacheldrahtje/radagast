@@ -16,6 +16,8 @@ public:
     ~MainWindow();
 
 private slots:
+    //declaration of slots including passwd.
+
     void nextButton1_clicked(); // Intro_page -> Enter_page
 
     void nextButton2_clicked(); // Enter_page -> Summary_page
@@ -35,4 +37,5 @@ private slots:
 private:
     Ui::MainWindow *ui;
 };
+
 #endif // MAINWINDOW_H

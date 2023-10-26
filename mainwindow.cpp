@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QDebug>
+#include "inputcontrol.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -10,13 +12,20 @@ MainWindow::MainWindow(QWidget *parent)
     ui->nextButton2->setEnabled(false);
     ui->fname_lineEdit->setFocus();
 
-    // connectors
-    QObject::connect (ui->nextButton1, &QPushButton::clicked, this, &MainWindow::nextButton1_clicked); // connector nextButton1
-    QObject::connect (ui->backButton1, &QPushButton::clicked, this, &MainWindow::backButton1_clicked); // connector backButton1
-    QObject::connect (ui->nextButton2, &QPushButton::clicked, this, &MainWindow::nextButton2_clicked); // connector nextButton2
-    QObject::connect (ui->uname_lineEdit, &QLineEdit::textChanged, this, &MainWindow::uname_lineEdit_textChanged); // connector check uname_LineEdit has changed
-    QObject::connect (ui->fname_lineEdit, &QLineEdit::textChanged, this, &MainWindow::fname_lineEdit_textChanged); // connector check fname_LineEdit has changed
-    QObject::connect (ui->backButton2, &QPushButton::clicked, this, &MainWindow::backButton2_clicked); // connector backButton1
+    // connector definition without passwd because they are on_****** and are located in separate functions.
+
+    // connector nextButton1
+    QObject::connect (ui->nextButton1, &QPushButton::clicked, this, &MainWindow::nextButton1_clicked);
+    // connector backButton1
+    QObject::connect (ui->backButton1, &QPushButton::clicked, this, &MainWindow::backButton1_clicked);
+    // connector nextButton2
+    QObject::connect (ui->nextButton2, &QPushButton::clicked, this, &MainWindow::nextButton2_clicked);
+    // connector check uname_LineEdit has changed
+    QObject::connect (ui->uname_lineEdit, &QLineEdit::textChanged, this, &MainWindow::uname_lineEdit_textChanged);
+    // connector check fname_LineEdit has changed
+    QObject::connect (ui->fname_lineEdit, &QLineEdit::textChanged, this, &MainWindow::fname_lineEdit_textChanged);
+    // connector backButton1
+    QObject::connect (ui->backButton2, &QPushButton::clicked, this, &MainWindow::backButton2_clicked);
 }
 
 
