@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     ui->label->setVisible(false);
+    ui->Dave->setVisible(false);
     ui->nextButton2->setEnabled(false);
     ui->fname_lineEdit->setFocus();
 
@@ -36,8 +37,13 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::uname_lineEdit_textChanged()
-{
-
+{    
+    if (regcheck(ui->uname_lineEdit->text()) == true)
+    {
+        ui->Dave->setVisible(true);
+        ui->nextButton2->setEnabled(false);
+        return;
+    } else {ui->Dave->setVisible(false);}
     if (ui->passwd_lineEdit->text() != ui->ret_passwd_lineEdit->text())
     {
            ui->nextButton2->setEnabled(false);
@@ -68,6 +74,12 @@ void MainWindow::fname_lineEdit_textChanged()
            ui->nextButton2->setEnabled(false);
            return;
     }
+    if (regcheck(ui->fname_lineEdit->text()) == true)
+    {
+           ui->Dave->setVisible(true);
+           ui->nextButton2->setEnabled(false);
+           return;
+    } else {ui->Dave->setVisible(false);}
     if (ui->passwd_lineEdit->text().length() > 1 && ui->uname_lineEdit->text().length() > 1)
     {
            ui->nextButton2->setEnabled(true);
@@ -109,6 +121,12 @@ void MainWindow::backButton2_clicked()
 // and remove the red message when they are the same
 void MainWindow::on_passwd_lineEdit_textChanged(const QString &arg1)
 {
+    if (regcheck(ui->passwd_lineEdit->text()) == true)
+    {
+           ui->Dave->setVisible(true);
+           ui->nextButton2->setEnabled(false);
+           return;
+    } else {ui->Dave->setVisible(false);}
     if (ui->passwd_lineEdit->text() != ui->ret_passwd_lineEdit->text())
     {
         ui->label->setVisible(true);
@@ -127,8 +145,14 @@ void MainWindow::on_passwd_lineEdit_textChanged(const QString &arg1)
 
 // if 2nd password line != 1st passwd line show red message passwords don't match
 // and remove the red message when they are the same
-void MainWindow::on_ret_passwd_lineEdit_textChanged(const QString &arg1)  // this code needs editing
+void MainWindow::on_ret_passwd_lineEdit_textChanged(const QString &arg1)
 {
+    if (regcheck(ui->ret_passwd_lineEdit->text()) == true)
+    {
+        ui->Dave->setVisible(true);
+        ui->nextButton2->setEnabled(false);
+        return;
+    } else {ui->Dave->setVisible(false);}
     if (ui->ret_passwd_lineEdit->text() != ui->passwd_lineEdit->text())
     {
         ui->label->setVisible(true);
