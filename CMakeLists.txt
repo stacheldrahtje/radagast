@@ -28,6 +28,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         inputcontrol.h
         inputcontrol.cpp
+        adduser/adduser.h
+        adduser/adduser.cpp
         #resources.qrc // disabled ivm copyright logo
 
     )
