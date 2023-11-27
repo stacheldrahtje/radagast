@@ -3,4 +3,4 @@
 
 int createuser (QString);
 char* hashpasswd (QString);
-char* stdout (QString);
+char* fnc_stdout (QString);
