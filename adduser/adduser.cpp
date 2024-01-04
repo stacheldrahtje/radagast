@@ -1,7 +1,10 @@
 #include <QString>
 #include <iostream>
+#include <string>
 
-int createuser (QString uname, QString fname);
+using namespace std;
+
+int createuser (QString uname, QString fname)
 {
     char username[16]="<username>";
     char fullname[16]="<fullname>";
