@@ -4,6 +4,9 @@
 
 using namespace std;
 
+//hashing is first order of business.
+char* hashpasswd (QString);
+
 int createuser (QString uname, QString fname)
 {
     char username[16]="<username>";
@@ -14,5 +17,5 @@ int createuser (QString uname, QString fname)
     cout << combi << endl;
     return 0;
 }
-char* hashpasswd (QString);
+
 char* fnc_stdout (QString);
