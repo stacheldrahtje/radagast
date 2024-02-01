@@ -1,6 +1,7 @@
 #include <QString>
 #include <iostream>
 #include <string>
+#include "adduser.h"
 
 using namespace std;
 
