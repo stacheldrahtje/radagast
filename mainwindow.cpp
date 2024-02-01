@@ -27,6 +27,8 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect (ui->fname_lineEdit, &QLineEdit::textChanged, this, &MainWindow::fname_lineEdit_textChanged);
     // connector backButton1
     QObject::connect (ui->backButton2, &QPushButton::clicked, this, &MainWindow::backButton2_clicked);
+    // connector commitButton1
+    QObject::connect (ui->commitButton, &QPushButton::clicked, this, &MainWindow::commitButton_clicked);
 }
 
 
