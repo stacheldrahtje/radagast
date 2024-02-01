@@ -6,6 +6,7 @@
 using namespace std;
 
 //hashing is first order of business.
+
 char hashpasswd (QString unhash)
 {
     //placeholder
