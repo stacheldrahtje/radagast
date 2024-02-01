@@ -24,6 +24,8 @@ private slots:
 
     void backButton2_clicked(); // Summary_page -> Enter_page
 
+    void commitButton_clicked(); // Commit_page -> Action
+
     void on_passwd_lineEdit_textChanged(const QString &arg1); // 1st passwd line check wrt 2nd passwd line
 
     void on_ret_passwd_lineEdit_textChanged(const QString &arg1); // 2nd passwd line check wrt 1st passwd line
