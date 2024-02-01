@@ -5,7 +5,7 @@
 using namespace std;
 
 //hashing is first order of business.
-char* hashpasswd (QString)
+char* hashpasswd (QString unhash)
 {
     //placeholder
 }
@@ -21,7 +21,7 @@ int createuser (QString uname, QString fname)
     return 0;
 }
 
-char* fnc_stdout (QString)
+char* fnc_stdout (QString hash)
 {
     //placeholder
 }
