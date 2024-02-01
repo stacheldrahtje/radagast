@@ -172,5 +172,7 @@ void MainWindow::on_ret_passwd_lineEdit_textChanged(const QString &arg1)
     }
 }
 
-
-
+void MainWindow::commitButton_clicked(char uname, char passwd)
+{
+    //placeholder for now.
+}
